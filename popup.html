@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      body {
+        width: 250px;
+        padding: 10px;
+        font-family: sans-serif;
+      }
+      .result {
+        background: #f4f4f4;
+        padding: 8px;
+        border-radius: 4px;
+      }
+      h3 {
+        color: #ffa116;
+      }
+      #resetAudio {
+        padding: 0.4rem;
+        color: white;
+        border: none;
+        font-size: 1.1rem;
+        background-color: rgb(4, 113, 4);
+      }
+    </style>
+  </head>
+  <body>
+    <h3>LeetCode Motivator</h3>
+    <div id="displayArea" class="result">Waiting for data...</div>
+    <hr />
+    <div style="margin-top: 10px">
+      <span style="font-weight: bold">Select your own Success Sound:</span>
+      <input
+        type="file"
+        id="audioUpload"
+        accept="audio/*"
+        style="margin-top: 5px; font-size: 12px"
+      />
+      <button id="resetAudio" style="margin-top: 5px; font-size: 10px">
+        Reset to Default
+      </button>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
