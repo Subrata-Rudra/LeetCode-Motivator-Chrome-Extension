@@ -21,7 +21,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["inject.js", "success.mp3", "try-again.mp3"],
+      "resources": ["inject.js", "success.mp3", "FAAAH.mp3"],
       "matches": ["https://leetcode.com/*"]
     }
   ],

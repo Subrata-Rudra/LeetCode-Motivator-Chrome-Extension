@@ -56,7 +56,7 @@ function playSuccessSound() {
 }
 
 function playTryAgainSound() {
-  const url = chrome.runtime.getURL("try-again.mp3");
+  const url = chrome.runtime.getURL("FAAAH.mp3");
   const audio = new Audio(url);
   audio.play();
 }
