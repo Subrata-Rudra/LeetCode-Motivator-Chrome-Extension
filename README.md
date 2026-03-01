@@ -1,6 +1,6 @@
 # LeetCode Motivator Chrome Extension
 ## ➡️ When you submit a solution in the LeetCode platform, this extension will play a sound if the solution gets accepted. The audio is customizable.
-## ➡️ It also plays a sound "Try again" if the solution is Wrong Answer.
+## ➡️ It also plays a sound "FAAAH...." if the solution is Wrong Answer.
 ## 📺Demo Video:
 
 
