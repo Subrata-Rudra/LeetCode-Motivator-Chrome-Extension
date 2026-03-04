@@ -9,7 +9,11 @@
     if (url.includes("/check")) {
       const clone = response.clone();
       clone.json().then((data) => {
-        if (Object.hasOwn(data, "status_msg")) {
+        if (
+          Object.hasOwn(data, "task_name") &&
+          data.task_name === "judger.judgetask.Judge" &&
+          Object.hasOwn(data, "status_msg")
+        ) {
           window.postMessage(
             {
               type: "LEETCODE_API_RESPONSE",

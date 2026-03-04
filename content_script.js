@@ -14,18 +14,22 @@ window.addEventListener(
 
       const data = event.data.payload;
 
-      if (Object.hasOwn(data, "status_msg")) {
+      if (
+        Object.hasOwn(data, "task_name") &&
+        Object.hasOwn(data, "status_msg") &&
+        (event.data.payload.status_msg === "Accepted" ||
+          event.data.payload.status_msg === "Wrong Answer")
+      ) {
         if (event.data.payload.status_msg === "Accepted") {
           playSuccessSound();
         } else if (event.data.payload.status_msg === "Wrong Answer") {
           playTryAgainSound();
         }
+        chrome.runtime.sendMessage({
+          action: "DATA_CAPTURED",
+          data: event.data.payload,
+        });
       }
-
-      chrome.runtime.sendMessage({
-        action: "DATA_CAPTURED",
-        data: event.data.payload,
-      });
     }
   },
   false,
